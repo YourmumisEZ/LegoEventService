@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LegoEventService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+946b375bd545b6945776dac4bd372e36e154e882")]
 [assembly: System.Reflection.AssemblyProductAttribute("LegoEventService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LegoEventService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
