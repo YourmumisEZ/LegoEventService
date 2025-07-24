@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LegoEventService.Domain/1.0.0": {
+        "dependencies": {
+          "AWSSDK.DynamoDBv2": "4.0.2.2"
+        },
+        "runtime": {
+          "LegoEventService.Domain.dll": {}
+        }
+      },
+      "AWSSDK.Core/4.0.0.15": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.15"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/4.0.2.2": {
+        "dependencies": {
+          "AWSSDK.Core": "4.0.0.15"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.2.2"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LegoEventService.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/4.0.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nt0pgf20/wt8NEH/Kw97CS9mlIivg3lROW1E2piFJZPmwZIDVKVEGSvCztGWedMByQYMVpxGbVmn7oC0p1vmkw==",
+      "path": "awssdk.core/4.0.0.15",
+      "hashPath": "awssdk.core.4.0.0.15.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/4.0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9nMbw6yQS8JHQj65ValLI48MKikkL8b46Q+yHS7oqtkdexgH/TBBKtzjxdKGxTjU1ea8zX0saZ6i7WP5xjsJfQ==",
+      "path": "awssdk.dynamodbv2/4.0.2.2",
+      "hashPath": "awssdk.dynamodbv2.4.0.2.2.nupkg.sha512"
+    }
+  }
+}

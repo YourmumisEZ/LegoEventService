@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoEventService", "LegoEventService.csproj", "{50B8D961-79E5-4219-B846-F72745CB5D72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoEventService.BL", "..\LegoEventService.BL\LegoEventService.BL.csproj", "{049B0621-9BCA-4EF8-8300-08F8F4D453A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoEventService.Infra", "..\LegoEventService.Infra\LegoEventService.Infra.csproj", "{96B554F7-DEC7-43F6-B61A-D0F5806B2109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoEventService.Domain", "..\LegoEventService.Domain\LegoEventService.Domain.csproj", "{0973FD19-2E65-4EF2-892D-8BD79C3EB10D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B8D961-79E5-4219-B846-F72745CB5D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B8D961-79E5-4219-B846-F72745CB5D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B8D961-79E5-4219-B846-F72745CB5D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B8D961-79E5-4219-B846-F72745CB5D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{049B0621-9BCA-4EF8-8300-08F8F4D453A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{049B0621-9BCA-4EF8-8300-08F8F4D453A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{049B0621-9BCA-4EF8-8300-08F8F4D453A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{049B0621-9BCA-4EF8-8300-08F8F4D453A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B554F7-DEC7-43F6-B61A-D0F5806B2109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B554F7-DEC7-43F6-B61A-D0F5806B2109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B554F7-DEC7-43F6-B61A-D0F5806B2109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B554F7-DEC7-43F6-B61A-D0F5806B2109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0973FD19-2E65-4EF2-892D-8BD79C3EB10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0973FD19-2E65-4EF2-892D-8BD79C3EB10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0973FD19-2E65-4EF2-892D-8BD79C3EB10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0973FD19-2E65-4EF2-892D-8BD79C3EB10D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E1883EE-018D-4CF4-8C8B-BDD0B3D1073F}
+	EndGlobalSection
+EndGlobal
