@@ -1,0 +1,12 @@
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\bin\Release\net8.0\LegoEventService.Infra.deps.json
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\bin\Release\net8.0\LegoEventService.Infra.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\bin\Release\net8.0\LegoEventService.Infra.pdb
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.GeneratedMSBuildEditorConfig.editorconfig
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.AssemblyInfoInputs.cache
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.AssemblyInfo.cs
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.csproj.CoreCompileInputs.cache
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.sourcelink.json
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\refint\LegoEventService.Infra.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\LegoEventService.Infra.pdb
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Infra\obj\Release\net8.0\ref\LegoEventService.Infra.dll
