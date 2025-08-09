@@ -141,3 +141,4 @@ E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService\obj\Release\net8.0\
 E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService\obj\Release\net8.0\LegoEventService.pdb
 E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService\obj\Release\net8.0\LegoEventService.genruntimeconfig.cache
 E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService\obj\Release\net8.0\ref\LegoEventService.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService\bin\Release\net8.0\AWSSDK.Extensions.NETCore.Setup.dll

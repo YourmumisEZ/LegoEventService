@@ -14,6 +14,7 @@ using Serilog.Sinks.AwsCloudWatch;
 using Amazon.CloudWatchLogs;
 using LegoEventService.Mutations;
 using LegoEventService.Queries;
+using Amazon.DynamoDBv2.DataModel;
 namespace LegoEventService
 {
     public class Program
@@ -24,27 +25,15 @@ namespace LegoEventService
             var builder = WebApplication.CreateBuilder(args);
 
             var jwtSettings = new JwtSettings();
-            var dbSettings = new DynamoDBSettings();
-
-            var dbConfig = new AmazonDynamoDBConfig
-            {
-                RegionEndpoint = RegionEndpoint.EUNorth1
-            };
-
-            var cloudwatchConfig = new AmazonCloudWatchLogsConfig
-            {
-                RegionEndpoint = RegionEndpoint.EUNorth1
-            };
 
             builder.Configuration.GetSection("JWT").Bind(jwtSettings);
-            builder.Configuration.GetSection("DynamoDB").Bind(dbSettings);
 
             Log.Logger = new LoggerConfiguration()
                     .MinimumLevel.Verbose()
                     .WriteTo.AmazonCloudWatch(
                         logGroup: "LegoEventService",
                         logStreamPrefix: DateTime.UtcNow.ToString("yyyyMMddHHmmssfff"),
-                        cloudWatchClient: new AmazonCloudWatchLogsClient(new BasicAWSCredentials(dbSettings.AccessKey, dbSettings.SecretKey), cloudwatchConfig))
+                        cloudWatchClient: new AmazonCloudWatchLogsClient())
                     .WriteTo.Console()
                     .CreateLogger();
 
@@ -76,8 +65,8 @@ namespace LegoEventService
                         };
                     });
 
-            builder.Services.AddSingleton(dbSettings);
-            builder.Services.AddSingleton<IAmazonDynamoDB>(sp => new AmazonDynamoDBClient(new BasicAWSCredentials(dbSettings.AccessKey, dbSettings.SecretKey), dbConfig));
+            builder.Services.AddAWSService<IAmazonDynamoDB>();
+            builder.Services.AddScoped<IDynamoDBContext, DynamoDBContext>();
             builder.Services.AddScoped<IEventsService, EventsService>();
             builder.Services.AddScoped<ISignupsService, SignupsService>();
             builder.Services.AddAuthorization(options =>

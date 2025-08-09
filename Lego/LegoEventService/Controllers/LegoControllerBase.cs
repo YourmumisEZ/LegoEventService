@@ -20,6 +20,7 @@ namespace LegoEventService.Controllers
         {
             try
             {
+                _logger.LogInformation(message: $"Accessing {function.Method.Name}");
                 var result = await function();
                 return Ok(result);
             }

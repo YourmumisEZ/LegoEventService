@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "d1A1gcRs71c=",
+  "dgSpecHash": "LU0MxAcTSdo=",
   "success": true,
   "projectFilePath": "E:\\solutions\\LegoRepo\\LegoEventService\\Lego\\LegoEventService\\LegoEventService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\aws.logger.core\\4.0.0\\aws.logger.core.4.0.0.nupkg.sha512",
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\aws.logger.serilog\\4.0.0\\aws.logger.serilog.4.0.0.nupkg.sha512",
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\awssdk.cloudwatchlogs\\4.0.7\\awssdk.cloudwatchlogs.4.0.7.nupkg.sha512",
-    "C:\\Users\\YourmumisEZ\\.nuget\\packages\\awssdk.core\\4.0.0.16\\awssdk.core.4.0.0.16.nupkg.sha512",
+    "C:\\Users\\YourmumisEZ\\.nuget\\packages\\awssdk.core\\4.0.0.18\\awssdk.core.4.0.0.18.nupkg.sha512",
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\awssdk.dynamodbv2\\4.0.2.2\\awssdk.dynamodbv2.4.0.2.2.nupkg.sha512",
+    "C:\\Users\\YourmumisEZ\\.nuget\\packages\\awssdk.extensions.netcore.setup\\4.0.2.1\\awssdk.extensions.netcore.setup.4.0.2.1.nupkg.sha512",
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\chillicream.nitro.app\\28.0.7\\chillicream.nitro.app.28.0.7.nupkg.sha512",
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\greendonut\\15.1.7\\greendonut.15.1.7.nupkg.sha512",
     "C:\\Users\\YourmumisEZ\\.nuget\\packages\\greendonut.abstractions\\15.1.7\\greendonut.abstractions.15.1.7.nupkg.sha512",

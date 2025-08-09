@@ -21,7 +21,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\YourmumisEZ\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
-    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\YourmumisEZ\.nuget\packages\awssdk.core\4.0.0.16</PkgAWSSDK_Core>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\YourmumisEZ\.nuget\packages\awssdk.core\4.0.0.18</PkgAWSSDK_Core>
     <PkgAWSSDK_CloudWatchLogs Condition=" '$(PkgAWSSDK_CloudWatchLogs)' == '' ">C:\Users\YourmumisEZ\.nuget\packages\awssdk.cloudwatchlogs\4.0.7</PkgAWSSDK_CloudWatchLogs>
     <PkgAWSSDK_DynamoDBv2 Condition=" '$(PkgAWSSDK_DynamoDBv2)' == '' ">C:\Users\YourmumisEZ\.nuget\packages\awssdk.dynamodbv2\4.0.2.2</PkgAWSSDK_DynamoDBv2>
   </PropertyGroup>

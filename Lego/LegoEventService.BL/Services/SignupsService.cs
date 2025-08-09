@@ -9,30 +9,23 @@ namespace LegoEventService.BL.Services
 {
     public class SignupsService : ISignupsService
     {
-        private readonly IAmazonDynamoDB _dbClient;
+        private readonly IDynamoDBContext _context;
 
-        public SignupsService(IAmazonDynamoDB dbClient)
+        public SignupsService(IDynamoDBContext context)
         {
-            _dbClient = dbClient;
+            _context = context;
         }
 
         public async Task SignUp(string userEmail, Guid eventId)
         {
             if (!string.IsNullOrEmpty(userEmail) && await CheckIfUserHasSignedUpForEvent(userEmail, eventId))
             {
-                var item = new Dictionary<string, AttributeValue>
+                await _context.SaveAsync(new SignUp
                 {
-                    { "UserEmail", new AttributeValue { S = userEmail } },
-                    { "EventId", new AttributeValue { S = eventId.ToString() } },
-                    { "CreatedDate", new AttributeValue { S = DateTime.UtcNow.ToString() } },
-                };
-                var request = new PutItemRequest
-                {
-                    TableName = "SignUps",
-                    Item = item
-                };
-
-                await _dbClient.PutItemAsync(request);
+                    UserEmail = userEmail,
+                    EventId = eventId.ToString(),
+                    CreatedDate = DateTime.UtcNow.ToString()
+                });
             }
         }
 
@@ -48,8 +41,7 @@ namespace LegoEventService.BL.Services
                 new ScanCondition("EventId", ScanOperator.Equal, eventId.ToString())
             };
 
-            var context = new DynamoDBContext(_dbClient);
-            var result = await context.ScanAsync<SignUp>(scanConditions).GetRemainingAsync();
+            var result = await _context.ScanAsync<SignUp>(scanConditions).GetRemainingAsync();
 
             return result;
         }
@@ -61,8 +53,7 @@ namespace LegoEventService.BL.Services
                 TableName = "SignUps"
             };
 
-            var context = new DynamoDBContext(_dbClient);
-            var result = await context.ScanAsync<SignUp>(new List<ScanCondition>()).GetRemainingAsync();
+            var result = await _context.ScanAsync<SignUp>(new List<ScanCondition>()).GetRemainingAsync();
 
             return result;
         }
@@ -80,10 +71,9 @@ namespace LegoEventService.BL.Services
                 new ScanCondition("UserEmail", ScanOperator.Equal, userEmail)
             };
 
-            var context = new DynamoDBContext(_dbClient);
-            var result = await context.ScanAsync<SignUp>(scanConditions).GetRemainingAsync();
+            var result = await _context.ScanAsync<SignUp>(scanConditions).GetRemainingAsync();
 
-            return result == null;
+            return result == null || result.Count == 0;
         }
     }
 }

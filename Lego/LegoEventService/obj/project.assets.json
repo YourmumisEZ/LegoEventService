@@ -52,7 +52,7 @@
           }
         }
       },
-      "AWSSDK.Core/4.0.0.16": {
+      "AWSSDK.Core/4.0.0.18": {
         "type": "package",
         "compile": {
           "lib/net8.0/AWSSDK.Core.dll": {
@@ -79,6 +79,28 @@
           "lib/net8.0/AWSSDK.DynamoDBv2.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "AWSSDK.Extensions.NETCore.Setup/4.0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "4.0.0.18",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets": {}
         }
       },
       "ChilliCream.Nitro.App/28.0.7": {
@@ -2042,15 +2064,15 @@
         "tools/uninstall.ps1"
       ]
     },
-    "AWSSDK.Core/4.0.0.16": {
-      "sha512": "GJlhEqljTAIB2nedgSggHgwKazx15A7cQylv1tpkG1DKwiT/YJ/1zxiG/UMSRIJI7EdKgbCz917UpDjw9qUwPw==",
+    "AWSSDK.Core/4.0.0.18": {
+      "sha512": "ZZKqiapUR0SR0r9tUR7us381A/8GdSC42Cah9+rXbEdORZN/wVcclLEqouicQdCxp1VJYec6GMUe5unuEB/Agw==",
       "type": "package",
-      "path": "awssdk.core/4.0.0.16",
+      "path": "awssdk.core/4.0.0.18",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.4.0.0.16.nupkg.sha512",
+        "awssdk.core.4.0.0.18.nupkg.sha512",
         "awssdk.core.nuspec",
         "images/AWSLogo.png",
         "lib/net472/AWSSDK.Core.dll",
@@ -2095,6 +2117,31 @@
         "lib/netstandard2.0/AWSSDK.DynamoDBv2.xml",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "AWSSDK.Extensions.NETCore.Setup/4.0.2.1": {
+      "sha512": "yPO1UTv07vj5MlQsECO9+BG7PXsMHVCGqL89+aGezvaVE4jGl3GShBrYC3Wk6sAATlw8TK7Bnd3R6gz+xUVg8w==",
+      "type": "package",
+      "path": "awssdk.extensions.netcore.setup/4.0.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ConfigurationSchema.json",
+        "awssdk.extensions.netcore.setup.4.0.2.1.nupkg.sha512",
+        "awssdk.extensions.netcore.setup.nuspec",
+        "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets",
+        "buildTransitive/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.targets",
+        "buildTransitive/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.targets",
+        "images/AWSLogo.png",
+        "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.xml",
+        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.xml",
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.xml"
       ]
     },
     "ChilliCream.Nitro.App/28.0.7": {
@@ -4770,6 +4817,7 @@
     "net8.0": [
       "AWS.Logger.SeriLog >= 4.0.0",
       "AWSSDK.CloudWatchLogs >= 4.0.7",
+      "AWSSDK.Extensions.NETCore.Setup >= 4.0.2.1",
       "HotChocolate.AspNetCore >= 15.1.7",
       "LegoEventService.BL >= 1.0.0",
       "LegoEventService.Domain >= 1.0.0",
@@ -4853,6 +4901,10 @@
           "AWSSDK.CloudWatchLogs": {
             "target": "Package",
             "version": "[4.0.7, )"
+          },
+          "AWSSDK.Extensions.NETCore.Setup": {
+            "target": "Package",
+            "version": "[4.0.2.1, )"
           },
           "HotChocolate.AspNetCore": {
             "target": "Package",

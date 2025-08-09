@@ -1,20 +1,19 @@
-﻿using Amazon.DynamoDBv2;
+﻿using Amazon;
+using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
 using LegoEventService.BL.Interfaces;
 using LegoEventService.Domain.Entitites;
-using Microsoft.Extensions.Logging;
 
 namespace LegoEventService.BL.Services
 {
     public class EventsService : IEventsService
     {
-        private readonly IAmazonDynamoDB _dbClient;
-
-        public EventsService(IAmazonDynamoDB dbClient)
+        private readonly IDynamoDBContext _context;
+        public EventsService(IDynamoDBContext context)
         {
-            _dbClient = dbClient;
+            _context = context;
         }
 
         public async Task<Guid> CreateEvent(string eventName)
@@ -23,19 +22,12 @@ namespace LegoEventService.BL.Services
             {
                 var newGuid = Guid.NewGuid();
 
-                var item = new Dictionary<string, AttributeValue>
-            {
-                { "EventId", new AttributeValue { S = newGuid.ToString() } },
-                { "EventName", new AttributeValue { S = eventName } },
-                { "CreatedDate", new AttributeValue { S = DateTime.UtcNow.ToString() } },
-            };
-                var request = new PutItemRequest
+                await _context.SaveAsync(new Event
                 {
-                    TableName = "Events",
-                    Item = item
-                };
-
-                await _dbClient.PutItemAsync(request);
+                    EventId = newGuid.ToString(),
+                    EventName = eventName,
+                    CreatedDate = DateTime.UtcNow.ToString()
+                });
 
                 return newGuid;
             }
@@ -55,8 +47,7 @@ namespace LegoEventService.BL.Services
                 new ScanCondition("EventId", ScanOperator.Equal, eventId.ToString())
             };
 
-            var context = new DynamoDBContext(_dbClient);
-            var result = await context.ScanAsync<Event>(new List<ScanCondition>()).GetRemainingAsync();
+            var result = await _context.ScanAsync<Event>(new List<ScanCondition>()).GetRemainingAsync();
 
             return result?.FirstOrDefault();
         }
@@ -68,8 +59,7 @@ namespace LegoEventService.BL.Services
                 TableName = "Events"
             };
 
-            var context = new DynamoDBContext(_dbClient);
-            var result = await context.ScanAsync<Event>(new List<ScanCondition>()).GetRemainingAsync();
+            var result = await _context.ScanAsync<Event>(new List<ScanCondition>()).GetRemainingAsync();
 
             return result;
         }
@@ -86,9 +76,7 @@ namespace LegoEventService.BL.Services
                 new ScanCondition("EventName", ScanOperator.Equal, eventName.ToString())
             };
 
-            var context = new DynamoDBContext(_dbClient);
-
-            var result = await context.ScanAsync<Event>(scanConditions).GetRemainingAsync();
+            var result = await _context.ScanAsync<Event>(scanConditions).GetRemainingAsync();
 
             return result?.FirstOrDefault();
         }

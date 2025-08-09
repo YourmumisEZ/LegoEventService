@@ -1,0 +1,13 @@
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\bin\Debug\net8.0\LegoEventService.Domain.deps.json
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\bin\Debug\net8.0\LegoEventService.Domain.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\bin\Debug\net8.0\LegoEventService.Domain.pdb
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.csproj.AssemblyReference.cache
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.AssemblyInfoInputs.cache
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.AssemblyInfo.cs
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.csproj.CoreCompileInputs.cache
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.sourcelink.json
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\refint\LegoEventService.Domain.dll
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\LegoEventService.Domain.pdb
+E:\solutions\LegoRepo\LegoEventService\Lego\LegoEventService.Domain\obj\Debug\net8.0\ref\LegoEventService.Domain.dll

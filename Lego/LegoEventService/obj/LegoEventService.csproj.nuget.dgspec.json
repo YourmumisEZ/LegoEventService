@@ -294,6 +294,10 @@
               "target": "Package",
               "version": "[4.0.7, )"
             },
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[4.0.2.1, )"
+            },
             "HotChocolate.AspNetCore": {
               "target": "Package",
               "version": "[15.1.7, )"
