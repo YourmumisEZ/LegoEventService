@@ -1,15 +1,11 @@
 using Amazon.DynamoDBv2;
-using Amazon.Runtime;
 using LegoEventService.BL.Interfaces;
 using LegoEventService.BL.Services;
 using LegoEventService.Infra.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Amazon;
 using Serilog;
-using AWS.Logger.SeriLog;
-using Serilog.Formatting.Compact;
 using Serilog.Sinks.AwsCloudWatch;
 using Amazon.CloudWatchLogs;
 using LegoEventService.Mutations;
@@ -89,7 +85,7 @@ namespace LegoEventService
                 options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
                 {
                     Name = "Authorization",
-                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = Microsoft.OpenApi.Models.ParameterLocation.Header,
