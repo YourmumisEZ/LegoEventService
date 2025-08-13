@@ -15,7 +15,7 @@ phases:
       - dotnet restore Lego/LegoEventService/LegoEventService.csproj
   build:
     commands:
-      - dotnet build --configuration Release --no-restore
+      - dotnet build Lego/LegoEventService/LegoEventService.csproj --configuration Release --no-restore
   post_build:
     commands:
       - mkdir -p artifact
