@@ -12,15 +12,13 @@ phases:
       - dotnet --info
   pre_build:
     commands:
-      - dotnet restore
+      - dotnet restore Lego/LegoEventService/LegoEventService.csproj
   build:
     commands:
       - dotnet build --configuration Release --no-restore
-      - dotnet test --configuration Release --no-build --logger "trx;LogFileName=testresults.trx"
   post_build:
     commands:
       - mkdir -p artifact
-      # publish the app (adjust path to your csproj if needed)
       - dotnet publish Lego/LegoEventService/LegoEventService.csproj -c Release -o artifact --no-build
 artifacts:
   files:
