@@ -89,7 +89,7 @@ namespace LegoEventService
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-                    Description = "Add bearer token"
+                    Description = "Add the bearer token"
                 });
 
                 options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement

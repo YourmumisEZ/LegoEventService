@@ -27,4 +27,4 @@ artifacts:
   discard-paths: no
 cache:
   paths:
-    - '/root/.nuget/packages/**/*'    # Linux NuGet cache
+    - '/root/.nuget/packages/**/*'
